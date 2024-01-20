@@ -11,10 +11,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Welcome to OpenAI Abstract Analyzer!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Enter the abstract of a sociology article below:
         </p>
+        <form onSubmit={handleSubmit}>
+          <textarea id="abstract" name="abstract" rows="4" cols="50"></textarea>
+          <input type="submit" value="Analyze" />
+        </form>
+        <div id="response"></div>
       </main>
 
       <Footer />
